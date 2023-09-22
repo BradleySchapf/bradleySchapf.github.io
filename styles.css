@@ -2,9 +2,12 @@ h1
 {
   margin: auto;
   color: red;
+  position: relative;
+  text-align: center;
 }
 
 p
 {
   margin: auto;
+  text-align: center;
 }
