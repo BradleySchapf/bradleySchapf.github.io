@@ -2,7 +2,7 @@ body
 {
   margin: 0;
   padding: 0;
-  background-color: #404040;
+  background-color: #6D4C3D;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,13 +11,20 @@ body
 
 h1 
 {
-  color: #a80000;
+  color: #ABC4AB;
   text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 5em;
 }
 
-p 
+a
 {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #DCC9B6;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
 }
 
 .container
@@ -25,5 +32,14 @@ p
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -80%);
 }
+
+/* potential colors: 
+
+Ash Grey:     #ABC4AB
+Lion:         #A39171
+Dun:          #DCC9B6
+Reseda Green: #727D71
+Coffee:       #6D4C3D
+*/
