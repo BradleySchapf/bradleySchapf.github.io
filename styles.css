@@ -27,6 +27,11 @@ a
   font-family: 'Poppins', sans-serif;
 }
 
+a:hover
+{
+  font-size: 1.2em;
+}
+
 .container
 {
   position: absolute;
