@@ -32,12 +32,26 @@ a:hover
   font-size: 1.2em;
 }
 
-.container
+main
 {
-  position: absolute;
+  /*position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -80%);
+  transform: translate(-50%, -80%); */
+}
+
+.socials
+{
+  max-width: 50px; 
+  max-height: 50px; 
+  display: flex;
+  
+}
+
+.socials:hover
+{
+  max-width: 65px;
+  max-height: 65px;
 }
 
 /* potential colors: 
