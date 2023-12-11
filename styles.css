@@ -1,58 +1,4 @@
-body 
-{
-  margin: 0;
-  padding: 0;
-  background-color: #6D4C3D;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
 
-h1 
-{
-  color: #ABC4AB;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 5em;
-}
-
-a
-{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #DCC9B6;
-  text-decoration: none;
-  font-family: 'Poppins', sans-serif;
-}
-
-a:hover
-{
-  font-size: 1.2em;
-}
-
-main
-{
-  /*position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -80%); */
-}
-
-.socials
-{
-  max-width: 50px; 
-  max-height: 50px; 
-  display: flex;
-  
-}
-
-.socials:hover
-{
-  max-width: 65px;
-  max-height: 65px;
-}
 
 /* potential colors: 
 
@@ -62,3 +8,148 @@ Dun:          #DCC9B6
 Reseda Green: #727D71
 Coffee:       #6D4C3D
 */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #6D4C3D;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    text-align: center;
+    color: #ABC4AB;
+    font-size: 2em;
+    position: relative;
+}
+
+header h1 {
+  margin: 0;
+  padding-top: 10px;
+  font-size: 4em;
+}
+
+.subtitle-container {
+    position: relative;
+    display: inline-block;
+    /* Adjust padding to position your subtitle and image */
+    padding-right: 230px; /* Adjust based on image size */
+}
+
+.profile {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0 auto;
+    width: 180px; /* Adjust as needed */
+    height: 180px; /* Adjust as needed */
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+}
+
+.profile img {
+    max-width: 100%;
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ABC4AB; /* adds a border around the image */
+    opacity: 0.8
+}
+
+.navigation {
+    display:flex;
+    justify-content: center;
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 60%;
+}
+
+.navigation li {
+    padding: 10px 0; /* Add padding to top and bottom for spacing */
+    border-bottom: 1px solid #DCC9B6; /* Horizontal line below each link */
+    display: inline-block;
+    width: 100%;
+}
+
+/* Remove the bottom border from the last item to avoid double lines at the end */
+.navigation li:last-child {
+    border-bottom: none;
+}
+
+
+.navigation li a {
+    display: block;
+    padding: 10px;
+    color: #DCC9B6;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navigation li a:hover {
+    color: #ABC4AB;
+    background-color: #A39171;
+}
+
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
+}
+
+footer .social-links a {
+    display: inline-block;
+    margin: 0 10px; /* Adjust spacing between social icons */
+}
+
+footer .social-links img {
+    width: 50px; /* Fixed width for social icons */
+    height: auto;
+}
+
+.footer .social-links {
+    justify-content: center; /* This will center the flex items if .social-links is a flex container */
+    display: flex; /* Makes sure that the social links are flex items */
+  }
+
+.footer-text {
+    text-align: center;
+    margin-bottom: 10px; /* Adds space below the text */
+    width: 100%;
+  }
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation {
+        text-align: center; /* Centers the text of each link */
+        margin: 0;
+
+    }
+
+    .navigation ul {
+        padding: 0; /* Reset any padding that might be pushing content */
+    }
+
+    .navigation li {
+        display: inline-block; /* Aligns list items next to each other */
+        width: 100%; /* Each link will take the full width */
+    }
+
+  header h1 {
+  font-size: 2em;
+  }
+}
