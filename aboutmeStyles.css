@@ -1,5 +1,4 @@
 
-
 /* potential colors: 
 
 Ash Grey:     #ABC4AB
@@ -21,6 +20,7 @@ header {
     color: #ABC4AB;
     font-size: 2em;
     position: relative;
+    padding-left: 200px;
 }
 
 header h1 {
@@ -33,16 +33,15 @@ header h1 {
 .subtitle-container {
     position: relative;
     display: inline-block;
-    /* Adjust padding to position your subtitle and image */
-    padding-right: 190px; /* Adjust based on image size */
+    padding-right: 190px; 
 }
 
 .profile {
     flex-grow: 1;
     text-align: center;
     margin: 0 auto;
-    width: 180px; /* Adjust as needed */
-    height: 180px; /* Adjust as needed */
+    width: 180px; 
+    height: 180px; 
     position: absolute;
     top: 50%;
     right: 0;
@@ -55,31 +54,38 @@ header h1 {
     display: block;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #ABC4AB; /* adds a border around the image */
+    border: 3px solid #ABC4AB; 
     opacity: 0.8
 }
 
 .navigation {
-    display:flex;
-    justify-content: center;
+    position: fixed; /* Fixed position */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 200px; /* Width of the navigation bar */
+    height: 100%; /* Full height */
+    background-color: #A39171; /* Change color as needed */
+    z-index: 1000; /* Ensure it's above other content */
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    justify-content: center; /* Center links */
 }
 
 .navigation ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    text-align: center;
-    width: 60%;
+    text-align: left;
 }
 
 .navigation li {
-    padding: 10px 0; /* Add padding to top and bottom for spacing */
-    border-bottom: 1px solid #DCC9B6; /* Horizontal line below each link */
+    padding: 10px 0; 
+    border-bottom: 1px solid #DCC9B6; 
     display: inline-block;
     width: 100%;
 }
 
-/* Remove the bottom border from the last item to avoid double lines at the end */
+
 .navigation li:last-child {
     border-bottom: none;
 }
@@ -87,17 +93,25 @@ header h1 {
 
 .navigation li a {
     display: block;
-    padding: 10px;
+    padding: 15px 20px; /* Padding for the links */
     color: #DCC9B6;
     text-decoration: none;
-    transition: color 0.3s ease, background-color 0.3s ease;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .navigation li a:hover {
     color: #ABC4AB;
-    background-color: #A39171;
+    background-color: #727D71;
 }
 
+.main-content {
+    margin-left: 200px; /* Space for the fixed navigation */
+    padding: 20px;
+    /* You may want to add the following properties to ensure the content area is centered */
+    width: calc(100% - 200px); /* Adjust width, accounting for navigation */
+    height: 100vh; /* Full height of the viewport */
+    overflow-y: auto; /* Enable scroll if content is taller than the screen */
+}
 
 
 footer {
@@ -110,22 +124,22 @@ footer {
 
 footer .social-links a {
     display: inline-block;
-    margin: 0 10px; /* Adjust spacing between social icons */
+    margin: 0 10px; 
 }
 
 footer .social-links img {
-    width: 50px; /* Fixed width for social icons */
+    width: 50px; 
     height: auto;
 }
 
 .footer .social-links {
-    justify-content: center; /* This will center the flex items if .social-links is a flex container */
-    display: flex; /* Makes sure that the social links are flex items */
+    justify-content: center; 
+    display: flex; 
   }
 
 .footer-text {
     text-align: center;
-    margin-bottom: 10px; /* Adds space below the text */
+    margin-bottom: 10px;
     width: 100%;
   }
 
@@ -136,18 +150,18 @@ footer .social-links img {
     }
 
     .navigation {
-        text-align: center; /* Centers the text of each link */
-        margin: 0;
-
+        position: static; /* Allow it to flow naturally in the document */
+        width: 100%; /* Full width */
+        display: block;
     }
 
     .navigation ul {
-        padding: 0; /* Reset any padding that might be pushing content */
+        padding: 0; 
     }
 
     .navigation li {
-        display: inline-block; /* Aligns list items next to each other */
-        width: 100%; /* Each link will take the full width */
+        display: inline-block; 
+        width: 100%; 
     }
 
   header h1 {
