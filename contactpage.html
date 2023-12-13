@@ -5,6 +5,7 @@
   <head>
     <title>Bradley Schapf</title>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -28,27 +29,36 @@
             </ul>
         </nav>   
     </div>
-    <main>
+    <main id="contact-main">
+        <h2>Get in touch.</h2>
+        <p>have any questions? looking for a resume or CV? or do you just want to say hi? feel free to send me an email through the contact form and I'll get back to you at the earliest convienience.</p>
         <form id="contactForm" action="index.html" method="post">
             <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name">
+                <div class="error" id="name_error">* Please enter your name.</div>
             </div>
             <div class="form-group">
                 <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                <input type="tel" id="phone" name="phone">
+                <div class="error" id="phone_error">* Please enter a valid phone number.</div>
+            </div>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email">
+                <div class="error" id="email_error">* Please enter a valid email address</div>
+            </div>
             </div>
             <div class="form-group">
                 <label for="comments">Comments:</label>
-                <textarea id="comments" name="comments" rows="4" required></textarea>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+                <div class="error" id="comments_error">* Please enter a comment.</div>
+            </div>
             </div>
             <div id="form-buttons">
-                <button type="submit">Submit</button>
-                <button type="reset">Reset</button>
+                <button type="submit" id="submit-buttom">Submit</button>
+                <button type="reset" id="reset-button">Reset</button>
             </div>
         </form>
     </main>

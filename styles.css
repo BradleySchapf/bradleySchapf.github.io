@@ -16,6 +16,10 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+p {
+  color: #DCC9B6;
+}
+
 header {
     text-align: center;
     color: #ABC4AB;
@@ -33,6 +37,8 @@ header h1 {
 h1, h2, h3, h4, h5, h6 {
   font-size: 2em;
   color: #ABC4AB;
+  margin: 0px;
+  padding: 0px;
 }
 #subtitle-container {
     position: relative;
@@ -65,6 +71,7 @@ h1, h2, h3, h4, h5, h6 {
     display:flex;
     justify-content: center;
     background-color: #A39171;
+    z-index: 1000;
 }
 
 #navigation ul {
@@ -93,12 +100,56 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #ABC4AB;
 }
 
-main {
+#index-main {
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  min-height: 30vh; /* Provides a minimum height for the container */
+  justify-content: center; 
+  align-items: center; 
+  min-height: 30vh; 
   flex-direction: column;
+}
+
+#about-me-main {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+#contact-main {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact-main p {
+  max-width: 500px;
+}
+
+#left-about-me {
+  display: flex;
+  border-right: 3px solid #DCC9B6;
+  padding: 10px;
+  flex-direction: column;
+  text-align: right;
+  max-width: 450px;
+}
+
+#left-about-me img {
+  float: right;
+  border: 3px solid #ABC4AB;
+}
+
+#right-about-me {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  padding: 10px;
+}
+
+#right-about-me img {
+  flex: 0 0 0;
+  border: 3px solid #ABC4AB;
+  max-height: 450px;
+  max-width: 300px;
 }
 
 #main-paragraphs {
@@ -107,11 +158,11 @@ main {
 }
 
 #contactForm {
-  width: 100%; /* Use the full width up to the max-width */
-  max-width: 500px; /* Set a maximum width for the form */
-  margin: auto; /* Centers the form in the provided space */
+  width: 100%; 
+  max-width: 500px; 
+  margin: auto; 
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow around the form */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); 
  
 }
 
@@ -125,22 +176,22 @@ footer {
 
 footer #social-links a {
     display: inline-block;
-    margin: 0 10px; /* Adjust spacing between social icons */
+    margin: 0 10px; 
 }
 
 footer #social-links img {
-    width: 50px; /* Fixed width for social icons */
+    width: 50px; 
     height: auto;
 }
 
 #footer #social-links {
-    justify-content: center; /* This will center the flex items if .social-links is a flex container */
-    display: flex; /* Makes sure that the social links are flex items */
+    justify-content: center; 
+    display: flex; 
   }
 
 #footer-text {
     text-align: center;
-    margin-bottom: 10px; /* Adds space below the text */
+    margin-bottom: 10px; 
     width: 100%;
   }
 
@@ -197,10 +248,10 @@ footer #social-links img {
         .form-group input[type="tel"]:focus,
         .form-group input[type="email"]:focus,
         .form-group textarea:focus {
-            background-color: #ABC4AB; /* Ash Grey for focus background */
-            color: #6D4C3D; /* Coffee for focus text */
+            background-color: #ABC4AB; 
+            color: #6D4C3D; 
             outline: none;
-            border-color: #727D71; /* Reseda Green for focus border */
+            border-color: #727D71; 
         }
 
 #form-buttons button {
@@ -209,8 +260,8 @@ footer #social-links img {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    background-color: #727D71; /* Reseda Green */
-    color: #DCC9B6; /* Dun */
+    background-color: #727D71; 
+    color: #DCC9B6; 
 }
 
     #form-buttons button:hover {
@@ -218,13 +269,11 @@ footer #social-links img {
         transition: color 0.3s ease, background-color 0.3s ease;
     }
 
-.error-message {
-    color: red;
-    margin-top: 5px;
-}
-
 .error {
     border-color: red;
+    color: red;
+    margin-top: 5px;
+    display: none;
 }
 
 #fade-animation {
@@ -249,8 +298,9 @@ footer #social-links img {
   max-width: 100%;
   overflow: hidden;
   white-space: nowrap;
-  animation:typing 3s steps(30, end)forwards;
+  animation:typing 3s steps(60, end)forwards;
   animation-delay: 3s;
+  color: #DCC9B6;
 }
 
 @keyframes typing {
@@ -258,7 +308,7 @@ footer #social-links img {
     width: 0;
   }
   to {
-    width:560px
+    width:550px
   }
 }
 
@@ -266,6 +316,7 @@ footer #social-links img {
   font-size: 2em;
   animation: blink 1.3s steps(100) infinite;
   animation-delay: 0.1s;
+  color: #DCC9B6;
 }
 
 @keyframes blink {
@@ -299,5 +350,13 @@ footer #social-links img {
 
     header h1 {
       font-size: 2em;
+    }
+
+    #about-me-main {
+      flex-direction: column;
+    }
+
+    #right-about-me {
+      border-left: 3px solid #ABC4AB;
     }
 }
