@@ -1,6 +1,6 @@
+/* Bradley Schapf's personal website */
 
-
-/* potential colors: 
+/* colors: 
 
 Ash Grey:     #ABC4AB
 Lion:         #A39171
@@ -30,75 +30,90 @@ header h1 {
   font-size: 3em;
 }
 
-.subtitle-container {
+h1, h2, h3, h4, h5, h6 {
+  font-size: 2em;
+  color: #ABC4AB;
+}
+#subtitle-container {
     position: relative;
     display: inline-block;
-    /* Adjust padding to position your subtitle and image */
-    padding-right: 190px; /* Adjust based on image size */
+    padding-right: 190px; 
 }
 
-.profile {
+#profile {
     flex-grow: 1;
     text-align: center;
     margin: 0 auto;
-    width: 180px; /* Adjust as needed */
-    height: 180px; /* Adjust as needed */
+    width: 180px; 
+    height: 180px; 
     position: absolute;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-
 }
 
-.profile img {
+#profile img {
     max-width: 100%;
     display: block;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #ABC4AB; /* adds a border around the image */
+    border: 3px solid #ABC4AB; 
     opacity: 0.8
 }
 
-.navigation {
+#navigation {
     display:flex;
     justify-content: center;
+    background-color: #A39171;
 }
 
-.navigation ul {
+#navigation ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     text-align: center;
-    width: 60%;
+    width: 80%;
 }
 
-.navigation li {
-    padding: 10px 0; /* Add padding to top and bottom for spacing */
-    border-bottom: 1px solid #DCC9B6; /* Horizontal line below each link */
-    display: inline-block;
-    width: 100%;
+#navigation li {
+    display: inline-block; 
+    width: 15%;
 }
 
-/* Remove the bottom border from the last item to avoid double lines at the end */
-.navigation li:last-child {
-    border-bottom: none;
-}
-
-
-.navigation li a {
-    display: block;
-    padding: 10px;
+#navigation li a {
+    display: inline-block;    
     color: #DCC9B6;
     text-decoration: none;
     transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 10px;
 }
 
-.navigation li a:hover {
-    color: #ABC4AB;
-    background-color: #A39171;
+#navigation li a:hover {
+    color: #6D4C3D;
+    background-color: #ABC4AB;
 }
 
+main {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  min-height: 30vh; /* Provides a minimum height for the container */
+  flex-direction: column;
+}
 
+#main-paragraphs {
+  display: flex;
+  align-items: center;
+}
+
+#contactForm {
+  width: 100%; /* Use the full width up to the max-width */
+  max-width: 500px; /* Set a maximum width for the form */
+  margin: auto; /* Centers the form in the provided space */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow around the form */
+ 
+}
 
 footer {
     display: flex;
@@ -108,49 +123,181 @@ footer {
     flex-direction: column;
 }
 
-footer .social-links a {
+footer #social-links a {
     display: inline-block;
     margin: 0 10px; /* Adjust spacing between social icons */
 }
 
-footer .social-links img {
+footer #social-links img {
     width: 50px; /* Fixed width for social icons */
     height: auto;
 }
 
-.footer .social-links {
+#footer #social-links {
     justify-content: center; /* This will center the flex items if .social-links is a flex container */
     display: flex; /* Makes sure that the social links are flex items */
   }
 
-.footer-text {
+#footer-text {
     text-align: center;
     margin-bottom: 10px; /* Adds space below the text */
     width: 100%;
   }
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
+#footer-navigation {
+  display:flex;
+  justify-content: center;
+}
+
+#footer-navigation ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+#footer-navigation li {
+  display: inline-block; 
+}
+
+#footer-navigation li a {
+  color: #DCC9B6;
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 10px;
+}
+
+#footer-navigation li a:hover {
+  color: #A39171;
+}
+
+
+/* Form related styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: #DCC9B6;
     }
 
-    .navigation {
-        text-align: center; /* Centers the text of each link */
-        margin: 0;
-
+    .form-group input[type="text"],
+    .form-group input[type="tel"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        width: calc(100% - 16px);
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
     }
 
-    .navigation ul {
-        padding: 0; /* Reset any padding that might be pushing content */
+        .form-group input[type="text"]:focus,
+        .form-group input[type="tel"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group textarea:focus {
+            background-color: #ABC4AB; /* Ash Grey for focus background */
+            color: #6D4C3D; /* Coffee for focus text */
+            outline: none;
+            border-color: #727D71; /* Reseda Green for focus border */
+        }
+
+#form-buttons button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #727D71; /* Reseda Green */
+    color: #DCC9B6; /* Dun */
+}
+
+    #form-buttons button:hover {
+        background-color: #ABC4AB; /* Ash Grey */
+        transition: color 0.3s ease, background-color 0.3s ease;
     }
 
-    .navigation li {
-        display: inline-block; /* Aligns list items next to each other */
-        width: 100%; /* Each link will take the full width */
-    }
+.error-message {
+    color: red;
+    margin-top: 5px;
+}
 
-  header h1 {
-  font-size: 2em;
+.error {
+    border-color: red;
+}
+
+#fade-animation {
+  opacity: 0; 
+  animation: fadeIn; 
+  animation-duration: 2.5s; 
+  animation-delay: 1.5s; 
+  animation-fill-mode: forwards; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
+
+#typing-animation {
+  width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  animation:typing 3s steps(30, end)forwards;
+  animation-delay: 3s;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width:560px
+  }
+}
+
+#cursor-animation {
+  font-size: 2em;
+  animation: blink 1.3s steps(100) infinite;
+  animation-delay: 0.1s;
+}
+
+@keyframes blink {
+    0%, 49.9% {
+        opacity: 1;
+    }
+    50%, 100% {
+        opacity: 0;
+    }c     
+}
+
+@media (max-width: 768px) {
+    #navigation {
+      text-align: center; 
+      margin: 0;
+    }
+
+    #navigation ul {
+      padding: 0; 
+    }
+
+    #navigation li {
+      display: inline-block; 
+      width: 100%; 
+      border-bottom: 1px solid #DCC9B6; 
+    } 
+
+    #navigation li:last-child {
+      border-bottom: none;
+    }
+
+    header h1 {
+      font-size: 2em;
+    }
 }
