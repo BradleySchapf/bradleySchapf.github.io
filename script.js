@@ -35,6 +35,21 @@ function formHasErrors() {
         }
     }
 
+    let regex = new RegExp(/^\d{10}$/);
+    let phoneNumValue = document.getElementById("phone").value;
+
+    if(!regex.test(phoneNumValue)) {
+        document.getElementById("phone_error").style.display = "block";
+
+        if(!errorFlag){
+            document.getElementById("phone").focus();
+            document.getElementById("student").select();
+
+        }
+
+        errorFlag = true;
+    } 
+
     return errorFlag;
 }
 
