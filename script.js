@@ -1,3 +1,5 @@
+// Bradley Schapfs personal website
+
 
 function validate(e) {
     //  Hides all error elements on the page
@@ -14,7 +16,6 @@ function validate(e) {
 }
 
 function formHasErrors() {
-    // Code below here
     let errorFlag = false;
 
     let requiredFields = ["name", "phone", "email", "comments"];

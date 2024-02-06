@@ -325,7 +325,7 @@ footer #social-links img {
     }
     50%, 100% {
         opacity: 0;
-    }c     
+    }     
 }
 
 @media (max-width: 768px) {
@@ -333,7 +333,7 @@ footer #social-links img {
       text-align: center; 
       margin: 0;
     }
-
+    
     #navigation ul {
       padding: 0; 
     }
