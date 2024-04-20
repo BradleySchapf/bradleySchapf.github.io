@@ -22,9 +22,10 @@
     </header>
         <nav id="navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aboutme.html">About me</a></li>
-                <li><a href="contactpage.html">Contact page</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="aboutme.php">About me</a></li>
+                <li><a href="contactpage.php">Contact page</a></li>
+                <li><a href="blog.php">Bradley's Blog</a></li>
             </ul>
         </nav>   
         <main id="about-me-main">
@@ -50,9 +51,9 @@
         </div>
         <nav id="footer-navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aboutme.html">About me</a></li>
-                <li><a href="contactpage.html">Contact page</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="aboutme.php">About me</a></li>
+                <li><a href="contactpage.php">Contact page</a></li>
             </ul>
         </nav>   
     </footer>
